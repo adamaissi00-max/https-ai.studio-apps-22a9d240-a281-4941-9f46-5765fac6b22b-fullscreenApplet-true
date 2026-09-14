@@ -66,21 +66,21 @@ export const CategoryNav: React.FC<CategoryNavProps> = ({
               key={cat.id}
               id={`cat-btn-${cat.id}`}
               onClick={() => onSelectCategory(cat.id)}
-              className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition-all duration-150 border shrink-0 ${
+              className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-black whitespace-nowrap transition-all duration-150 border shrink-0 cursor-pointer ${
                 isSelected
-                  ? 'bg-emerald-600 border-emerald-600 text-white shadow-sm shadow-emerald-600/30'
-                  : 'bg-white border-gray-200 text-gray-700 hover:border-emerald-300 hover:bg-emerald-50/50'
+                  ? 'bg-zinc-950 border-zinc-950 text-amber-400 shadow-sm shadow-zinc-900/30'
+                  : 'bg-white border-zinc-200 text-zinc-700 hover:border-amber-400 hover:bg-amber-50/50'
               }`}
             >
-              <span className={isSelected ? 'text-white' : 'text-emerald-700'}>
+              <span className={isSelected ? 'text-amber-400' : 'text-zinc-600'}>
                 {getIcon(cat.id)}
               </span>
               <span>{cat.name}</span>
               <span
-                className={`text-xs px-1.5 py-0.5 rounded-full font-semibold ${
+                className={`text-xs px-1.5 py-0.5 rounded-full font-bold ${
                   isSelected
-                    ? 'bg-emerald-700/60 text-emerald-100'
-                    : 'bg-gray-100 text-gray-500'
+                    ? 'bg-amber-400 text-zinc-950 font-black'
+                    : 'bg-zinc-100 text-zinc-600'
                 }`}
               >
                 {count}

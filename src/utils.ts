@@ -1,5 +1,5 @@
 import { CartItem, OrderCustomerInfo } from './types';
-import { STORE_NAME, STORE_PHONE, STORE_WHATSAPP } from './data/products';
+import { STORE_NAME, STORE_ADDRESS, STORE_PHONE, STORE_WHATSAPP } from './data/products';
 
 export function formatDZD(amount: number): string {
   return `${amount.toLocaleString('ar-DZ')} دج`;
@@ -26,14 +26,14 @@ export function generateWhatsAppMessage(
   const notesText = customerInfo.notes ? `📝 ملاحظات: ${customerInfo.notes}` : '';
 
   const message = `السلام عليكم ورحمة الله وبركاته،
-أود تقديم طلبية من متجر "${STORE_NAME}" (مدينة أفلو):
+أود تقديم طلبية من متجر "${STORE_NAME}" (${STORE_ADDRESS}):
 
 🛒 *قائمة المشتريات:*
 ${itemsText}
 
 ----------------------------
 💵 *المجموع الإجمالي للمنتجات:* ${totalPrice} دج
-🛵 *التوصيل:* بواسطة دراجة نارية (داخل مدينة أفلو)
+🛵 *التوصيل:* بواسطة دراجة نارية / سيارة (داخل مدينة أفلو)
 🤝 *طريقة الدفع:* نقداً عند الاستلام
 
 👤 *بيانات الزبون والتوصيل في أفلو:*

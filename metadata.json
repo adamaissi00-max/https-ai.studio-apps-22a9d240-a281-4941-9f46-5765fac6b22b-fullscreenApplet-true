@@ -1,6 +1,6 @@
 {
-  "name": "سعدي المواد الغذائية",
-  "description": "متجر سعدي المواد الغذائية - طلب سريع ومباشر عبر واتساب مع خدمة التوصيل بالدراجة النارية داخل مدينة أفلو.",
+  "name": "AFLOU BADR MARKET",
+  "description": "AFLOU BADR MARKET - متجر بدر ماركت للمواد الغذائية في أفلو وسط المدينة قرب حمام بدر، طلب مباشر عبر الواتساب وتوصيل سريع لكافة الأحياء.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

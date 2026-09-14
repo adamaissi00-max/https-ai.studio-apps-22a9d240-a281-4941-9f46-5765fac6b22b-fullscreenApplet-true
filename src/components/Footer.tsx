@@ -1,79 +1,97 @@
 import React from 'react';
 import { Phone, MessageCircle, Bike, MapPin, Clock } from 'lucide-react';
-import { STORE_NAME, STORE_PHONE, STORE_CITY, STORE_WHATSAPP } from '../data/products';
+import {
+  STORE_NAME,
+  STORE_SUBTITLE,
+  STORE_ADDRESS,
+  STORE_PHONE,
+  STORE_PHONE_DISPLAY,
+  STORE_CITY,
+  STORE_WHATSAPP,
+} from '../data/products';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="mt-16 bg-white border-t border-emerald-100 py-10 text-gray-700">
+    <footer className="mt-16 bg-zinc-950 text-zinc-300 py-10 border-t-2 border-amber-400">
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand Info */}
           <div className="space-y-3">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-black text-xl">
-                س
+              <div className="w-9 h-9 rounded-xl bg-amber-400 text-zinc-950 flex items-center justify-center font-black text-sm">
+                بدر
               </div>
-              <h3 className="font-black text-lg text-gray-900">{STORE_NAME}</h3>
+              <div>
+                <h3 className="font-black text-lg text-white">{STORE_NAME}</h3>
+                <p className="text-xs text-amber-400 font-bold">{STORE_SUBTITLE}</p>
+              </div>
             </div>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              متجركم المحلي الموثوق لتوفير المواد الغذائية الأساسية والتموينية في {STORE_CITY}. جودة عالية، أسعار تنافسية، وتوصيل سريع ومباشر.
+            <p className="text-sm text-zinc-400 leading-relaxed">
+              متجركم المعتمد للمواد الغذائية والتموينية في {STORE_CITY}. جودة عالية، أسعار تنافسية، وخدمة توصيل فورية لكافة الأحياء.
             </p>
+            <div className="flex items-center gap-2 text-xs text-amber-300 bg-zinc-900 p-2.5 rounded-xl border border-zinc-800">
+              <MapPin className="w-4 h-4 text-amber-400 shrink-0" />
+              <span>{STORE_ADDRESS}</span>
+            </div>
           </div>
 
           {/* Delivery & Area info */}
           <div className="space-y-3">
-            <h4 className="font-bold text-gray-900 text-sm flex items-center gap-2">
-              <Bike className="w-4 h-4 text-emerald-600" />
-              <span>خدمة التوصيل السريع</span>
+            <h4 className="font-bold text-white text-sm flex items-center gap-2">
+              <Bike className="w-4 h-4 text-amber-400" />
+              <span>خدمة التوصيل بأفلو</span>
             </h4>
-            <ul className="text-sm space-y-2 text-gray-600">
+            <ul className="text-sm space-y-2 text-zinc-400">
               <li className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-emerald-500 shrink-0" />
+                <MapPin className="w-4 h-4 text-amber-400 shrink-0" />
                 <span>حصرياً داخل كافة أحياء مدينة أفلو</span>
               </li>
               <li className="flex items-center gap-2">
-                <Bike className="w-4 h-4 text-emerald-500 shrink-0" />
-                <span>توصيل مرن وسريع عبر دراجة نارية</span>
+                <Bike className="w-4 h-4 text-amber-400 shrink-0" />
+                <span>توصيل مرن وسريع عبر دراجة نارية وسيارات</span>
               </li>
               <li className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-emerald-500 shrink-0" />
-                <span>مفتوح يومياً لاستقبال طلبياتكم</span>
+                <Clock className="w-4 h-4 text-amber-400 shrink-0" />
+                <span>الحد الأدنى للطلبية 350 دج فقط</span>
               </li>
             </ul>
           </div>
 
           {/* Contact & WhatsApp */}
           <div className="space-y-3">
-            <h4 className="font-bold text-gray-900 text-sm">تواصل معنا للطلب والاستفسار</h4>
+            <h4 className="font-bold text-white text-sm">تلقي الطلبيات عبر الواتساب</h4>
             <div className="space-y-2">
               <a
                 href={`https://wa.me/${STORE_WHATSAPP}`}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2.5 p-2.5 bg-emerald-50 hover:bg-emerald-100 rounded-xl text-emerald-900 text-sm font-bold transition-colors"
+                className="flex items-center gap-2.5 p-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 rounded-xl text-zinc-100 text-sm font-bold transition-colors"
               >
                 <div className="w-7 h-7 rounded-lg bg-[#25D366] text-white flex items-center justify-center">
                   <MessageCircle className="w-4 h-4" />
                 </div>
-                <span>واتساب: {STORE_PHONE}</span>
+                <div>
+                  <span className="text-xs text-zinc-400 block">واتساب الطلبيات:</span>
+                  <span className="text-amber-400 font-bold" dir="ltr">{STORE_PHONE_DISPLAY}</span>
+                </div>
               </a>
 
               <a
                 href={`tel:${STORE_PHONE}`}
-                className="flex items-center gap-2.5 p-2.5 bg-gray-50 hover:bg-gray-100 rounded-xl text-gray-800 text-sm font-bold transition-colors"
+                className="flex items-center gap-2.5 p-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 rounded-xl text-zinc-100 text-sm font-bold transition-colors"
                 dir="ltr"
               >
-                <div className="w-7 h-7 rounded-lg bg-emerald-600 text-white flex items-center justify-center">
+                <div className="w-7 h-7 rounded-lg bg-amber-400 text-zinc-950 flex items-center justify-center font-bold">
                   <Phone className="w-4 h-4" />
                 </div>
-                <span>{STORE_PHONE}</span>
+                <span className="text-zinc-200">{STORE_PHONE_DISPLAY}</span>
               </a>
             </div>
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-gray-100 text-center text-xs text-gray-500">
-          <p>© {new Date().getFullYear()} {STORE_NAME} - مدينة أفلو، ولاية الأغواط، الجزائر. جميع الحقوق محفوظة.</p>
+        <div className="mt-8 pt-6 border-t border-zinc-800 text-center text-xs text-zinc-500">
+          <p>© {new Date().getFullYear()} {STORE_NAME} - {STORE_ADDRESS}، ولاية الأغواط، الجزائر. جميع الحقوق محفوظة.</p>
         </div>
       </div>
     </footer>

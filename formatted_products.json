@@ -1,80 +1,7 @@
-import { Category, Product } from "../types";
-
-export const STORE_PHONE = "0663905799";
-export const STORE_PHONE_DISPLAY = "0663 90 57 99";
-export const STORE_WHATSAPP = "213663905799";
-export const STORE_NAME = "AFLOU BADR MARKET";
-export const STORE_SUBTITLE = "بدر ماركت للمواد الغذائية";
-export const STORE_ADDRESS = "أفلو وسط المدينة حمام بدر";
-export const STORE_CITY = "أفلو";
-export const MIN_ORDER_AMOUNT = 350; // الحد الأدنى لتأكيد الطلب 350 دج
-
-export const AFLOU_NEIGHBORHOODS = [
-  "وسط المدينة (قرب حمام بدر)",
-  "حي الجامعة",
-  "حي الكاستور",
-  "حي الاستقلال",
-  "حي المستقبل",
-  "حي الديانسي",
-  "حي كوسيدار",
-  "حي مقبرة الشهداء",
-  "حي القرابة",
-  "حي المقرين",
-  "حي 1400",
-  "حي لقباب",
-  "حي آخر في أفلو (يحدد في العنوان)",
-];
-
-export const STORE_SERVICES = [
-  {
-    id: "express-delivery",
-    title: "توصيل سريع لباب منزلك",
-    desc: "توصيل حصري وفوري لجميع أحياء مدينة أفلو بالدراجة النارية والسيارة",
-    icon: "Bike"
-  },
-  {
-    id: "cash-on-delivery",
-    title: "الدفع نقداً عند الاستلام",
-    desc: "ادفع بأمان عند وصول الموزع إلى باب بيتك وتأكدك من مشترياتك",
-    icon: "ShieldCheck"
-  },
-  {
-    id: "verify-order",
-    title: "معاينة الطلبية قبل الدفع",
-    desc: "حق الفحص والتحقق من جودة السلع وتواريخ الصلاحية مع عون التوصيل",
-    icon: "CheckCircle2"
-  },
-  {
-    id: "whatsapp-ordering",
-    title: "طلب فوري عبر الواتساب",
-    desc: "أرسل سلعتك بنقرة زر واحدة أو تواصل معنا مباشرة عبر الواتساب 0663905799",
-    icon: "MessageCircle"
-  },
-  {
-    id: "real-prices",
-    title: "أسعار السوق الحقيقية",
-    desc: "منتجات أصلية 100% مستوردة ومحلية معتمدة بأفضل الأسعار بالدينار الجزائري",
-    icon: "BadgePercent"
-  }
-];
-
-export const CATEGORIES: Category[] = [
-  { id: "all", name: "جميع المنتجات", iconName: "LayoutGrid" },
-  { id: "pasta-couscous", name: "باستا وكسكس", iconName: "Wheat" },
-  { id: "dairy", name: "منتجات الحليب", iconName: "Milk" },
-  { id: "legumes", name: "البقوليات الجافة", iconName: "Layers" },
-  { id: "coffee-sugar", name: "قهوة وسكر", iconName: "Coffee" },
-  { id: "canned", name: "معلبات وتونة", iconName: "Package" },
-  { id: "beverages", name: "مشروبات ومياه", iconName: "CupSoda" },
-  { id: "oils", name: "زيوت وصلصات", iconName: "Droplet" },
-  { id: "sweets", name: "بسكويت وحلويات", iconName: "Cookie" },
-  { id: "cleaning", name: "مواد التنظيف", iconName: "Sparkles" },
-];
-
-export const PRODUCTS: Product[] = [
+[
   {
     "id": "areej_1001",
-    "name": "سباغيتي إكسترا",
+    "name": "سباغيتيEXTRA",
     "originalName": "Spaghetti 500g EXTRA",
     "category": "pasta-couscous",
     "price": 90,
@@ -254,7 +181,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     "id": "areej_1019",
-    "name": "سباغيتي au Blé Complet محبوبة",
+    "name": "سباغيتيau Blé Complet محبوبة",
     "originalName": "SPAGHETTI au Blé Complet 500G محبوبة",
     "category": "pasta-couscous",
     "price": 110,
@@ -404,7 +331,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     "id": "areej_1034",
-    "name": "سباغيتي SIM",
+    "name": "سباغيتيSIM",
     "originalName": "SPAGHETTI  SIM 500G",
     "category": "pasta-couscous",
     "price": 60,
@@ -588,7 +515,7 @@ export const PRODUCTS: Product[] = [
     "originalName": "CANDY CHOCO 200ML",
     "category": "dairy",
     "price": 55,
-    "unit": "200M ل",
+    "unit": "200Mل",
     "image": "https://areej.store/wp-content/uploads/2023/03/CANDY-CHOCO.jpg",
     "popular": false
   },
@@ -598,7 +525,7 @@ export const PRODUCTS: Product[] = [
     "originalName": "CANDY CHOCO 125ML",
     "category": "dairy",
     "price": 40,
-    "unit": "125M ل",
+    "unit": "125Mل",
     "image": "https://areej.store/wp-content/uploads/2023/03/CANDY-CHOCO-35DA.jpg",
     "popular": false
   },
@@ -1108,7 +1035,7 @@ export const PRODUCTS: Product[] = [
     "originalName": "GAZEUSE SELECTO 33CL HAMOUD",
     "category": "beverages",
     "price": 45,
-    "unit": "33C ل",
+    "unit": "33Cل",
     "image": "https://areej.store/wp-content/uploads/2023/03/images-5.jpg",
     "popular": false
   },
@@ -1118,7 +1045,7 @@ export const PRODUCTS: Product[] = [
     "originalName": "GAZEUSE SLIM HAMOUD ORANGE 33CL",
     "category": "beverages",
     "price": 45,
-    "unit": "33C ل",
+    "unit": "33Cل",
     "image": "https://areej.store/wp-content/uploads/2023/03/images-1.jpg",
     "popular": false
   },
@@ -1128,7 +1055,7 @@ export const PRODUCTS: Product[] = [
     "originalName": "GAZEUSE HAMOUD BLANCHE 33CL",
     "category": "beverages",
     "price": 45,
-    "unit": "33C ل",
+    "unit": "33Cل",
     "image": "https://areej.store/wp-content/uploads/2023/03/hamoud_33cl_pet.jpg",
     "popular": false
   },
@@ -1168,7 +1095,7 @@ export const PRODUCTS: Product[] = [
     "originalName": "GAZEUSE SLIM CITRON 33CL HAMOUD",
     "category": "beverages",
     "price": 45,
-    "unit": "33C ل",
+    "unit": "33Cل",
     "image": "https://areej.store/wp-content/uploads/2023/03/CITRON_FR_33CL.jpg",
     "popular": false
   },
@@ -1348,7 +1275,7 @@ export const PRODUCTS: Product[] = [
     "originalName": "Pendentif de Toilette Ambi Pur 55ml – Parfum Tea Tree & Pin",
     "category": "cleaning",
     "price": 450,
-    "unit": "55M ل",
+    "unit": "55Mل",
     "image": "https://areej.store/wp-content/uploads/2024/11/Remove-background-project-011472541.jpg",
     "popular": false
   },
@@ -1358,7 +1285,7 @@ export const PRODUCTS: Product[] = [
     "originalName": "Bloc WC Flash Citron 55ml Ambi Pur",
     "category": "cleaning",
     "price": 450,
-    "unit": "55M ل",
+    "unit": "55Mل",
     "image": "https://areej.store/wp-content/uploads/2024/11/Remove-background-project-1.2565.jpg",
     "popular": false
   },
@@ -1448,7 +1375,7 @@ export const PRODUCTS: Product[] = [
     "originalName": "Gel WC Lavande 750ML Dorilflor",
     "category": "cleaning",
     "price": 240,
-    "unit": "750M ل",
+    "unit": "750Mل",
     "image": "https://areej.store/wp-content/uploads/2024/10/Dorilflor-gel-wc-750ml-Lavande.jpg",
     "popular": false
   },
@@ -1592,4 +1519,4 @@ export const PRODUCTS: Product[] = [
     "image": "https://areej.store/wp-content/uploads/2023/03/AMIR-CLEAN-GEL-JAVEL-2L.jpg",
     "popular": false
   }
-];
+]
